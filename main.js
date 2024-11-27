@@ -11,9 +11,11 @@
 // showNumberOfDone(getNumberOfDone())
 // showNumberOfNotDone(getNumberOfNotDone())
 
-import { addTodoHandler } from "./eventHandler/eventController.js"
+import { addTodoHandler,loadHandler, beforeUnloadHandler } from "./eventHandler/eventController.js"
 const addBtn = document.querySelector('#addBtn')
 addBtn.addEventListener('click', addTodoHandler)
+document.addEventListener('DOMContentLoaded', loadHandler)
+window.addEventListener('beforeunload', beforeUnloadHandler)
 
 
 
